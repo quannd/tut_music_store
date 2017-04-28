@@ -1,0 +1,13 @@
+﻿#Home li a#current, #Store li a#current1, #StoreManager li a#current2,  #ShoppingCart li a#cart-status
+{
+     background-color : blue;
+}
+#categories{
+    text-align: center;
+    width:200px;  
+}
+div.Classical ul li#Classical, div.Jazz ul li#Jazz, div.Rock ul li#Rock, div.Pop ul li#Pop, div.Disco ul li#Disco,
+ div.Latin ul li#Latin, div.Metal ul li#Metal, div.Reggae ul li#Reggae,div.Alternative ul li#Alternative,div.Blues ul li#Blues
+{
+    background-color: blue
+}
