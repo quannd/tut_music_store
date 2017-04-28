@@ -1,4 +1,10 @@
-  language: csharp,
-  solution: MvcMusicStore.sln
-  group: branch,
-  os: windows
+language:
+    csharp
+
+install:
+    - nuget restore MvcMusicStore.sln
+    - sudo apt-get install nunit-console
+    
+script:
+    - xbuild ./MvcMusicStore/MvcMusicStore.csproj 
+  dist: trusty
