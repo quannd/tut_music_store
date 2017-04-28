@@ -7,4 +7,4 @@ install:
     
 script:
     - xbuild ./MvcMusicStore/MvcMusicStore.csproj 
-  dist: trusty
+dist: trusty
