@@ -1,0 +1,31 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<MvcMusicStore.Models.Album>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/cssbrowser.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Browse Albums";
+}
+
+<div class="genre">
+    <h1 id="h1style">Albums:<em id="genreview">@ViewBag.genre</em></h1>
+
+    <ul id="album-list">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="@Url.Action("Details", new { id = item.AlbumId })">
+                    <img alt="@item.Title" src="@item.AlbumArtUrl" />
+                    <span>@item.Title</span>                    
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+<div class="dsds" style="padding-top:300px">
+    
+        @Html.PagedListPager(Model, sotrang => Url.Action("Browse", new { genre = ViewBag.genre, page = sotrang }))
+        @*Html.PagedListPager(Model.Albums, sotrang => Url.Action("Browse", new { page = sotrang }))*@
+        
+
+</div>

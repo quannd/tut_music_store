@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MvcMusicStore.Models.Genre>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Content/mycss.css" rel="stylesheet" />
+
+
+@{
+    var name = ViewData["key"];
+}
+
+<div class="@name">
+    <ul id="categories">
+
+        @foreach (var genre in Model)
+        {
+            <li id="@genre.Name">
+                @Html.ActionLink(genre.Name,
+                "Browse", "Store",
+                new { Genre = genre.Name }, null)
+            </li>
+        }
+    </ul>
+</div>
+@*
+    <script type="text/javascript">
+        $(function () {
+            // Document.ready -> link up remove event handler
+            $("#navi").click(function () {
+
+                $("#categories").css("color", "yellow");
+            });
+        });
+    </script>
+*@

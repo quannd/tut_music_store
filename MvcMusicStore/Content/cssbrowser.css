@@ -1,0 +1,14 @@
+﻿#genreview {
+    text-align: center;
+    font-style:italic;
+    color: blue;
+   
+}
+#h1style{
+    margin-top: 20px;
+    margin-left: 400px;
+    margin-bottom:50px
+}
+ul.pagination {
+    margin-top: 200px;
+}
