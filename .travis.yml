@@ -1,0 +1,4 @@
+  language: csharp,
+  solution: MvcMusicStore.sln
+  group: branch,
+  os: windows
